@@ -1,0 +1,270 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body{
+      font-family: 'Poppins', sans-serif;
+      transition: background-color var(--transition-duration) ease,color var(--transition-duration) ease;
+    }
+    .buttons-container{
+      display: flex;
+      justify-content: center;
+      margin-left: -25px;
+      margin-top: 70px;
+    }
+
+
+    h1{
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .rock-button{
+      background-color: rgb(255, 63, 242);
+      border-style: solid;
+      border-color: rgb(255, 63, 242);
+      border: none;
+      border-radius: 30px;
+      width: 70px;
+      height: 36px;
+      margin-left: 30px;
+    }
+
+
+    .rock-button:hover{
+      box-shadow: 0px 0px 20px rgb(237, 75, 227);
+      transition: 0.5s;
+    }
+
+
+    .rock-button:active{
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 30px rgb(237, 75, 227);
+      background-color:rgb(205, 63, 196);
+    }
+    
+    .paper-button{
+      background-color: rgb(173, 246, 72);
+      border-style: solid;
+      border-color: rgb(173, 246, 72);
+      border-radius: 30px;
+      width: 70px;
+      border: none;
+      height: 36px;
+      margin-left: 30px;
+    }
+
+    .paper-button:hover{
+      box-shadow: 0px 0px 20px rgb(173, 246, 72);
+      transition: 0.6s;
+    }
+
+
+    .paper-button:active{
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 30px rgb(166, 255, 0);
+      background-color:rgb(140, 199, 58);
+      transition: 0.3s;
+    }
+
+    .scissor-button{
+      background-color: rgb(66, 248, 227);
+      border-style: solid;
+      border-color: rgb(66, 248, 227);
+      border-radius: 30px;
+      margin-left: 30px;
+      border: none;
+      width: 70px;
+      height: 36px;
+    }
+
+    .scissor-button:hover{
+      box-shadow: 0px 0px 20px rgb(66, 248, 227);
+      transition: 0.6s;
+    }
+
+
+    .scissor-button:active{
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 30px rgb(62, 228, 209);
+      background-color:rgb(50, 194, 178);
+      transition: 0.3s;
+    }
+
+    span{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+
+    p{
+      display: flex;
+      justify-content: center;  
+      margin-top: 100px;
+    }
+
+
+    .reset-button{
+      background-color: rgb(255, 0, 0);
+      border-style: solid;
+      border-color: rgb(255, 0, 0);
+      border-radius: 30px;
+      margin-left: 30px;
+      border: none;
+      width: 100px;
+      height: 36px;
+      color: #fff;
+    }
+
+
+    .reset-button:hover{
+      box-shadow: 0px 0px 20px rgb(224, 5, 5);
+      transition: 0.6s;
+    }
+
+
+    .reset-button:active{
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 30px rgb(255, 0, 0);
+      background-color:rgb(208, 0, 0);
+      transition: 0.3s;
+    }
+
+
+    .js-score{
+      font-size: 20px;
+    }
+
+
+    .score-board {
+      margin-top: 70px;
+    }
+
+
+   
+    .js-result {
+      margin-top: 0;
+      margin-bottom: 50px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .js-moves {
+      margin-top: 0;
+      margin-bottom: 50px;
+      font-size: 20px;
+    }
+
+
+    .js-score {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+
+
+
+    :root {
+  --transition-duration: 0.6s;
+    }
+
+    /* Light Mode */
+    body {
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    /* Dark Mode */
+    body.dark-mode {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    /* Add fluid transition */
+    body {
+      transition: background-color var(--transition-duration) ease;
+      transition: color var(--transition-duration) ease;
+    }
+
+
+
+
+    .icon {
+    font-size: 20px;
+    margin-right: 5px;
+    }
+
+    /* .light-mode-icon::before {
+      content: "\f185"; 
+      font-family: "Font Awesome"; 
+    }
+
+    .dark-mode-icon::before {
+      content: "\f186"; 
+      font-family: "Font Awesome"; 
+    } */
+
+
+
+    .icon {
+      font-size: 20px;
+      margin-right: 5px;
+    }
+
+    .light-mode-icon img {
+      display: inline;
+    }
+
+    .dark-mode-icon img {
+      display: none;
+    }
+
+    body.dark-mode .light-mode-icon img {
+      display: none;
+      transition-duration: 0.6s;
+    }
+
+    body.dark-mode .dark-mode-icon img {
+      display: inline;
+      transition-duration: 0.6s;
+    }
+
+
+    .dark-light-mode-icon{
+      border-radius: 10px;
+      width: 50px;
+    }
+   
+    .light-mode-icon{
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      margin-left: 1px;
+    }
+
+    .dark-mode-icon{
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      margin-left: 1px;
+    }
+
+    .dark-light-mode-icon{
+      border-style: solid;
+      border-color: black;
+      color: #ffffff;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      
+    }
+   
+
+    .header-section{
+      display: flex;
+      justify-content:space-evenly;
+      align-items: center;
+    }
+
+    .heading-one{
+      margin-right: -380px;
+    }
