@@ -130,3 +130,26 @@ function playGame(playerMove) {
     lightModeIcon.classList.toggle('hidden');
     darkModeIcon.classList.toggle('hidden');
   }
+
+
+
+function toggleDarkMode() {
+  const body = document.querySelector('body');
+  const lightModeIcon = document.querySelector('.light-mode-icon');
+  const darkModeIcon = document.querySelector('.dark-mode-icon');
+  const isDarkMode = body.classList.toggle('dark-mode');
+
+  // Store the user's preference in local storage
+  localStorage.setItem('darkMode', isDarkMode);
+
+  // Toggle the visibility of the mode icons
+  lightModeIcon.classList.toggle('hidden', isDarkMode);
+  darkModeIcon.classList.toggle('hidden', !isDarkMode);
+}
+
+// Check if the user's preference is stored in local storage
+const storedDarkMode = localStorage.getItem('darkMode');
+if (storedDarkMode === 'true') {
+  // Enable dark mode if the user's preference is set to true
+  document.body.classList.add('dark-mode');
+}
